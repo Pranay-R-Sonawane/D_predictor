@@ -33,13 +33,13 @@ with st.sidebar:
 
     # Reset video on page change
     if selected == "Home":
-        video_container.video(r"C:\Users\prana\PyCharmMiscProject\D_predictor files\Intro Video Of D_predictor App.mp4", start_time=0.0)
+        video_container.video(r"Intro Video Of D_predictor App.mp4", start_time=0.0)
 
     elif selected == "Project":
-        video_container.video(r"C:\Users\prana\PyCharmMiscProject\D_predictor files\Intro Video Of D_predictor App.mp4", start_time=0.0)
+        video_container.video(r"Intro Video Of D_predictor App.mp4", start_time=0.0)
 
     elif selected == "Contact":
-        video_container.video(r"C:\Users\prana\PyCharmMiscProject\D_predictor files\Intro Video Of D_predictor App.mp4", start_time=0.0)
+        video_container.video(r"Intro Video Of D_predictor App.mp4", start_time=0.0)
     else:
         pass
 
@@ -763,7 +763,7 @@ elif selected == 'Project':
 
         def delete_rows():
 
-            def excute():
+            def execute():
                 row = st.session_state.delete_row_input  # read from session_state
                 if row in table.index:
                     table.drop(index=row, inplace=True)
@@ -774,13 +774,13 @@ elif selected == 'Project':
                     else:
                         table.drop(table.index, inplace=True)
 
-            Row = st.number_input(
+            row_main = st.number_input(
                 '❌Delete By Rows :',
                 key="delete_row_input",
                 width=250,
                 min_value=0,
                 max_value=len(table),
-                on_change=excute,
+                on_change=execute,
                 disabled=st.session_state.disable_column
             )
 
